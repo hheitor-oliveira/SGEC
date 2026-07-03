@@ -1,17 +1,16 @@
 class Product:
-  def __init__(self, 
-               id, 
-               name, 
-               price_buy, 
-               price_sell, 
-               category,
-               quantity):
-    
-    self.id = id
-    self.name = name
-    self.price_buy = price_buy
-    self.price_sell = price_sell
-    self.category = category
-    self.quantity = quantity
-    
-    
+    def __init__(self,
+                 id: int,
+                 name: str,
+                 category: str,
+                 quantity: int,
+                 value: float,
+                 buy_price: float
+                 ):
+        self.product_id = id
+        self.product_name = name
+        self.product_category = category
+        self.product_quantity = quantity
+        self.product_value = value
+        self.buy_price = buy_price
+        

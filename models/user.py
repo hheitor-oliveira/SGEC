@@ -1,11 +1,12 @@
 class User:
-  def __init__(self,
-               id,
-               name,
-               email,
-               password):
-    
-    self.id = id
-    self.name = name
-    self.email = email
-    self.password = password
+    def __init__(self,
+                 id: int,
+                 name: str,
+                 login: str,
+                 password: str,
+                 function: str):
+        self.user_id = id
+        self.username = name
+        self.login = login
+        self.password = password
+        self.user_function = function
