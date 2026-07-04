@@ -1,48 +1,54 @@
-VENDA
+SALE
 -------------------
-id_venda (PK)
-id_usuario (FK)
-data
-valor_total
+sale_id (PK)
+user_id (FK)
+total_value
+sale_date
 
-ITEM_VENDA
+SALE_ITEM
 -------------------
-id_item_venda (PK)
-id_venda (FK)
-id_produto (FK)
-quantidade
-preco_unitario
-desconto
+sale_item_id(PK)
+sale_id (FK)
+product_id (FK)
+quantity
+unitary_value
+discount
 
-FORMA_PAGAMENTO
+SALE_PAYMENT
 -------------------
-id_forma_pagamento (PK)
-id_venda (FK)
-método
-valor
-PRODUTO
+payment_item_id (PK)
+sell_id (FK)
+payment_method_id (FK)
+value
+
+PAYMENT_METHOD
 -------------------
-id_produto (PK)
-nome
-preco_compra
-preco_venda
-quantidade
-MOVIMENTAÇÃO
+payment_method_id (PK)
+name
+active
+PRODUCT
 -------------------
-id_movimentação (PK)
-id_usuário (FK)
-tipo
-data
-ITEM_MOVIMENTAÇÃO
+product_id (PK)
+name
+cost_price
+sale_price
+stock_quantity
+MOVEMENT
 -------------------
-id_item_movimentação (PK)
-id_movimentação (FK)
-id_produto (FK)
-quantidade
-USUÁRIO
+movement_id (PK)
+user_id (FK)
+type
+movement_date
+MOVEMENT_ITEM
 -------------------
-id_usuário (PK)
-nome_usuário
-email_usuário
-senha_usuário
-perfil_usuário
+movement_item_id (PK)
+movement_id (FK)
+product_id (FK)
+quantity
+USER
+-------------------
+user_id (PK)
+username
+user_email
+password_hash
+user_role
