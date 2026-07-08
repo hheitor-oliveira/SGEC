@@ -1,6 +1,6 @@
-### Entitys and Attributes
+### Entidades e Atributos
 
-**V1.0 - Atual System
+**V1.0 - Domínio Atual
 
 - **Product**
 	product_id
@@ -55,29 +55,13 @@
 
 ****
 
-**V2.0 - Entidades Futuras**
-
-- **Auditoria_Venda**
-	id_auditoria_venda
-	id_usuário_responsável
-	id_venda
-	motivo
-
-- **Auditoria_Movimentação**
-	id_auditoria_movimentação
-	id_usuário_responsável
-	id_movimentação
-	motivo
-
----
-
 ### Relacionamentos
 
-**Toda Venda contêm Pagamento
+**Toda Venda contêm Pagamento**
 - Toda venda pode ter um ou vários Item_Venda.
 - Todo Item_Venda só pode estar atrelado no máximo a uma Venda
 
-**Todo Pagamento contêm Método de Pagamento
+**Todo Pagamento contêm Método de Pagamento**
 - Todo pagamento pode ter uma ou várias formas de pagamento.
 - Toda forma de pagamento pode estar atrelado a um e vários pagamentos.
 
@@ -87,14 +71,12 @@
 
 **Toda Venda contêm Usuário**
 - Toda venda possui no máximo um Usuário responsável.
+- Um usuário pode ser responsável por N vendas.
 
 **Toda Movimentação contêm um Item_Movimentação**
 - Uma movimentação pode ter um ou vários Item_Movimentação.
 - Um Item_Movimentação só pode estar atrelado a no máximo uma movimentação.
 
-Toda Movimentação contêm um Usuário
+**Toda Movimentação contêm um Usuário**
 - Uma movimentação só pode ter no máximo um usuário atrelado.
 - Um usuário pode estar atrelado a um ou várias movimentações.
-## Regras de Negócio
-
-Entender como modelar.
