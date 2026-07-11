@@ -1,23 +1,29 @@
+# lib's imports
 from datetime import datetime
+
+# internals imports
 from domain.users.system_user import SystemUser
 from domain.sales.sale_item import SaleItem
 from domain.sales.sale_payment import SalePayment
 
 class Sale:
+    """
+    
+    """
     def __init__(self,
-                 sale_id: int,
-                 sale_item: list[SaleItem],
+                 id: int,
+                 items: list[SaleItem],
                  sale_payment: list[SalePayment],
-                 users: SystemUser,
+                 user: SystemUser,
                  total_value: float,
-                 sale_discount: int,
+                 discount: int,
                  sale_date: datetime):
 
-        self.sale_id = sale_id
-        self.sale_item = sale_item
+        self.id = id
+        self.items = items
         self.sale_payment = sale_payment
-        self.users = users
+        self.user = user
         self.total_value = total_value
-        self.sale_discount = sale_discount
+        self.discount = discount
         self.sale_date = sale_date
         

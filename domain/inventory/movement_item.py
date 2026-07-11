@@ -1,11 +1,15 @@
-from product import Product
+# internal imports
+from domain.inventory.product import Product
 
 class MovementItem:
+  """
+  
+  """
   def __init__(self,
                id: int,
-               product_name: Product,
+               product: Product,
                quantity: int
                ):
     self.id = id
-    self.product_name = product
+    self.product = product
     self.quantity = quantity

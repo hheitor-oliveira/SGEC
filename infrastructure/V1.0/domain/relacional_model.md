@@ -1,3 +1,5 @@
+# Relacional Model
+
 ## SALE
  - sale_id (PK)
  - user_id (FK)
@@ -8,7 +10,7 @@
 ---
 
 ## SALE_ITEM
- - sale_item_id(PK)
+ - sale_item_id (PK)
  - sale_id (FK)
  - product_id (FK)
  - quantity
@@ -26,17 +28,17 @@
 
 ## PAYMENT_METHOD
  - payment_method_id (PK)
- - name
- - active
+ - payment_method_name
+ - payment_method_is_active
 
 ---
 
 ## PRODUCT
  - product_id (PK)
- - name
+ - product_name
  - cost_price
  - sale_price
- - category
+ - product_category
  - stock_quantity
  - product_status
 
@@ -45,7 +47,7 @@
 ## MOVEMENT
  - movement_id (PK)
  - user_id (FK)
- - type
+ - movement_type
  - note
  - movement_date
 
@@ -63,6 +65,6 @@
 
  - user_id (PK)
  - user_name
- - user_email
+ - user_login
  - password_hash
- - role
+ - user_role

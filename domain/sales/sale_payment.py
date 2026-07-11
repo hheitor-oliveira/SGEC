@@ -1,5 +1,9 @@
-from domain.sales.payment_method import PaymentMethod
+# lib's imports
 from decimal import Decimal
+
+# internal imports
+from domain.sales.payment_method import PaymentMethod
+
 
 class SalePayment:
     def __init__(self,

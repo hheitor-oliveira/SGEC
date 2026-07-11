@@ -4,10 +4,10 @@ class SystemUser:
                  name: str,
                  login: str,
                  password: str,
-                 function: str):
+                 role: str):
                  
-        self.user_id = id
-        self.username = name
+        self.id = id
+        self.name = name
         self.login = login
         self.password = password
-        self.user_function = function
+        self.role = role

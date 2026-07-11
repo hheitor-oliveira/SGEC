@@ -1,11 +1,18 @@
-from ../inventory import Product
+# lib's imports
+from decimal import Decimal
+
+# internal imports
+from domain.inventory.product import Product
 
 class SaleItem:
+    """
+    
+    """
     def __init__(self,
                  id: int,
                  product: Product,
                  quantity: int,
-                 unitary_value: decimal):
+                 unitary_value: Decimal):
         
         self.id = id
         self.product = product
