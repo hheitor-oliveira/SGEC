@@ -254,24 +254,30 @@
 
 ### **Responsibility's**
 
-- R1: Representar os itens dentro de uma movimentação no sistema, permitindo assim uma movimentação com múltiplos itens.
+- Representar os itens dentro de uma movimentação no sistema, permitindo assim uma movimentação com múltiplos itens.
 
 ---
 ### **Relationships**
 
 ##### Movement
-- Tipo de Relacionamento: Composição
+- Tipo de Relacionamento: Associação
 - -> Movimentação onde os items estão incluídos.
+
+##### Product
+- Tipo de Relacionamento: Composição
+- -> Produto usado como referência para o item.
 
 ---
 ### **Attribute's**
 
-
+  - id: int
+  - product: Product
+  - quantity: int
 
 ---
 ### **Rules**
 
-- Em desenvolvimento.
+- Domain Rule MovementItem 01: A quantidade do item deve ser maior que 0.
 
 ---
 ### Public Interface
@@ -282,7 +288,7 @@
 
 ### **Responsibility's**
 
-- R1: Representar os usuários que utilizam os sistemas, definir permissões e hierarquia.
+- Representar os usuários que realizam as ações dentro do sistema, e controlar permissionismo.
 
 ---
 ### **Relationships**
@@ -298,6 +304,11 @@
 ---
 ### **Attribute's**
 
+  - id: int
+  - name: str
+  - login: str
+  - password_hash: str
+  - role: Roles (enum) -> admin, technique, attendant
 
 ---
 ### **Rules**

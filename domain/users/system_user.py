@@ -1,13 +1,16 @@
+# internal's imports
+from domain.enums.roles import Roles
+
 class SystemUser:
     def __init__(self,
                  id: int,
                  name: str,
                  login: str,
-                 password: str,
-                 role: str):
+                 password_hash: str,
+                 role: Roles):
                  
         self.id = id
         self.name = name
         self.login = login
-        self.password = password
+        self.password_hash = password_hash
         self.role = role
