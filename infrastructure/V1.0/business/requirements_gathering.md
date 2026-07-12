@@ -7,38 +7,37 @@
 - #### **Requisitos funcionais.**
 	***V1.0*** - Cadastros, Registro
 		**Estoque**
-			- Cadastrar Produto
-			- Editar Produto
-			- Remover Produto
-			- Consultar Quantidades
-			- Filtrar por Categorias
-			- Filtrar por Quantidade de Vendas
-			- Entrada de Notas
-			- Saída Manual
-			- Monitoramento Automático de Quantidades
-			- Gerar Lista de Compras em PDF
+			- Cadastrar, editar e alterar o estado dos produtos.
+			- Consultar estoque dos produtos sem e com filtros.
+			- Consultar quantidade de vendas de cada item.
+			- Entrada e saída de produtos.
+			- Aviso automático de baixa quantidade.
+			- Gerar lista de compras em PDF.
 
 		**Vendas**
-			- Registrar Vendas
-			- Consultar Vendas
-			- Listar todas as vendas
-			- Imprimir extrato de caixa diário
-			- Aplicar desconto por valor
-			- Aplicar desconto por porcentagem
+			- Realizar vendas.
+			- Consultar histórico de vendas por intervalo de tempo (mês/ano).
+			- Gerar extrato de caixa diário em PDF com sobra e dinheiro físico já contabilizado.
+			- Permitir desconto nas vendas por porcentagem ou valor.
+			- Permitir geração da nota fiscal do produto em PDF.
+			- Permitir aplicação de garantia com escolha de período.
+
+		**Usuário**
+			- Ser registrado nas operações realizadas no sistema para rastreamento.
+			- Ter ações delimitadas baseadas em seu cargo.
+			
 ---
 
 - #### **Requisitos não funcionais.**
-	***V1.0*** - Terminal Simples
-		**PostgreSQL**: Para garantir eficiência e persistência dos dados.
-		Pensando...
-
+		PostgreSQL
+		Interface Web
 ---
 
 - #### **Regras de negócio.**
 	**Vendas**
 	RNGV01 - Uma venda só poderá ser concluída quando o total dos pagamentos for igual ao valor total da venda.
 	RNGV02 - Uma venda deverá ser cancelada caso o estoque não permitir a retirada de um produto.
-	RNGV03 - Qualquer produto adicionado a uma venda vira com 1 por padrão.
+	RNGV03 - Qualquer produto adicionado a uma venda vira com só podera ter valores acima de 0.
 	RNGV04 - Uma venda é iniciada quando é adicionado um produto.
 	RNGV05 - Os descontos serão aplicados na venda inteira, não em produtos individualmente.
 

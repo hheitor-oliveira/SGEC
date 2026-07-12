@@ -11,6 +11,6 @@ class SalePayment:
                  payment_method: PaymentMethod,
                  payment_value: Decimal):
         
-        self.id = id
-        self.payment_method = payment_method
-        self.payment_value = payment_value
+        self._id = id
+        self._payment_method = payment_method
+        self._payment_value = payment_value

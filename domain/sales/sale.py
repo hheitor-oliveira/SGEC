@@ -1,5 +1,6 @@
 # lib's imports
 from datetime import datetime
+from decimal import Decimal
 
 # internals imports
 from domain.users.system_user import SystemUser
@@ -8,22 +9,24 @@ from domain.sales.sale_payment import SalePayment
 
 class Sale:
     """
-    
+    *
     """
     def __init__(self,
                  id: int,
                  items: list[SaleItem],
                  sale_payment: list[SalePayment],
                  user: SystemUser,
-                 total_value: float,
-                 discount: int,
+                 total_value: Decimal,
+                 discount_type: int,
+                 discount_value: Decimal,
                  sale_date: datetime):
 
-        self.id = id
-        self.items = items
-        self.sale_payment = sale_payment
-        self.user = user
-        self.total_value = total_value
-        self.discount = discount
-        self.sale_date = sale_date
+        self._id = id
+        self._items = items
+        self._sale_payment = sale_payment
+        self._user = user
+        self._total_value = total_value
+        self._discount_type = discount_type
+        self._discount_value = discount_value
+        self._sale_date = sale_date
         

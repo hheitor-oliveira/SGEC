@@ -14,7 +14,7 @@ class SaleItem:
                  quantity: int,
                  unitary_value: Decimal):
         
-        self.id = id
-        self.product = product
-        self.quantity = quantity
-        self.unitary_value = unitary_value
+        self._id = id
+        self._product = product
+        self._quantity = quantity
+        self._unitary_value = unitary_value

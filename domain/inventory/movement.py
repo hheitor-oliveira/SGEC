@@ -2,6 +2,7 @@
 from datetime import datetime
 
 # internal imports
+from domain.enums.movement_type import MovementType
 from domain.users.system_user import SystemUser
 from domain.inventory.movement_item import MovementItem
 
@@ -14,11 +15,11 @@ class Movement:
                  id: int,
                  items: list[MovementItem],
                  user: SystemUser,
-                 type: int,
-                 date: datetime
+                 movement_type: MovementType,
+                 movement_date: datetime
                  ):
-        self.movement_id = id
-        self.items = items
-        self.user = user
-        self.type = type
-        self.date = date
+        self._movement_id = id
+        self._items = items
+        self._user = user
+        self._movement_type = movement_type
+        self._movement_date = movement_date
