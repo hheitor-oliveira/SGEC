@@ -1,9 +1,11 @@
+from domain.enums.payment_methods import Method
+
 class PaymentMethod:
   def __init__(self,
                id: int,
-               name: str,
+               method: Method,
                active: bool
                ) -> None:
     self._id = id
-    self._name = name
+    self._method = method
     self._active = active

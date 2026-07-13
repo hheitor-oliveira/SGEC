@@ -1,5 +1,5 @@
 # internal's imports
-from domain.enums.roles import Roles
+from domain.enums.user_roles import Roles
 
 class SystemUser:
     def __init__(self,

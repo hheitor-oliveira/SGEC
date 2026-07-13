@@ -212,11 +212,13 @@
 ---
 ### Public Interface
 
-- remove_stock()
-- add_stock()
-- edit_name()
-- edit_category()
-- edit_status()
+  - remove_stock()
+  - add_stock()
+  - change_name()
+  - change_sale_value()
+  - change_cost_price()
+  - change_status()
+  - change_category()
 
 ## Class: Movement
 
