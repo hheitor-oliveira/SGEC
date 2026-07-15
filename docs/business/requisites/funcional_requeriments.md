@@ -1,0 +1,23 @@
+# **Requisitos funcionais.**
+---
+  - **Estoque**
+	  - Cadastro de produtos.
+	  - Edição de produtos.
+		- Consulta de estoque.
+		- Entrada de produtos.
+		- Saída de produtos.
+		- Gerar lista de compras.
+		- Auditoria das movimentações com filtro.
+---
+  - **Vendas**
+	  - Realizar vendas.
+	  - Gerar extrato de caixa em PDF com sobra e dinheiro físico já contabilizado.
+	  - Permitir desconto nas vendas por porcentagem ou valor.
+    - Permitir geração da nota fiscal do produto em PDF.
+	  - Permitir aplicação de garantia com escolha de período.
+		- Auditoria das vendas com filtro.
+---
+  - **Usuário**
+	  - Permissões por cargo.
+		- Auditoria das ações realizadas.
+

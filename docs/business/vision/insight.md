@@ -12,11 +12,11 @@
 
 ---
 ### 4. Quais são os pontos ruins do processo atual?
-R: **Falta de centralização; Divergência de Dados; Baixa ou nenhuma rastreabilidade; Sem fonte da verdade; Processo manual e totalmente dependente da ação humana; Falta de padrão; Redundância dos dados;**
+**R: Falta de centralização; Divergência de Dados; Baixa ou nenhuma rastreabilidade; Sem fonte da verdade; Processo manual e totalmente dependente da ação humana; Falta de padrão; Redundância dos dados;**
 
 ---
 ### 5. Qual é a razão de desenvolver uma solução para esse problema?
-R: **A razão é trazer uma solução, onde exista controle, confiabilidade, velocidade, rastreabilidade, otimização do tempo, uma única fonte da verdade, processo automatizado e monitorável. Melhorando assim o desempenho dos profissionais da empresa nas outras tarefas realizadas, realocando essa responsabilidade nesta solução.**
+**R: A razão é trazer uma solução, onde exista controle, confiabilidade, velocidade, rastreabilidade, otimização do tempo, uma única fonte da verdade, processo automatizado e monitorável. Melhorando assim o desempenho dos profissionais da empresa nas outras tarefas realizadas, realocando essa responsabilidade nesta solução.**
 
 ---
 

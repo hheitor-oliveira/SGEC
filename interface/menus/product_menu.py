@@ -3,7 +3,7 @@
 # internal import's
 from interface.terminal import Terminal
 from domain.enums.product_categorys import Category
-from services.product_service import ProductService
+from services.inventory.product_service import ProductService
 
 class ProductMenu:
   

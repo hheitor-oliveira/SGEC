@@ -1,0 +1,51 @@
+# Class: Product
+
+### **Responsibility's**
+
+  - Representar os produtos do sistema.
+  - Fazer validações de entradas e saídas.
+  - Controlar e representar estoque.
+
+---
+### **Relationships**
+
+##### SaleItem
+  - Tipo de Relacionamento: Associação
+  - -> Representa o produto dentro de um item da venda.
+
+##### MovementItem
+  - Tipo de Relacionamento: Associação
+  - -> Representa o produto dentro de uma um item da movimentação.
+
+---
+### **Attribute's**
+
+  - (+) id: int
+  - (+) name: str
+  - (+) category: str
+  - (#) stock_quantity: int
+  - (#) sale_value: Decimal
+  - (#) cost_price: Decimal
+  - (+) product_Status: Status (enum) -> Active, Inactive, Descontinued
+
+---
+### **Rules**
+
+  - Domain Rule Product 01: A quantidade em estoque de um produto não pode ser negativa.
+
+  - Domain Rule Product 02: O produto só poderá receber uma movimentação de saída, se a quantidade de saída não for maior que sua quantidade em estoque.
+
+  - Domain Rule Product 03: Um produto que estiver inativo não pode receber saídas através de vendas.
+
+  - Domain Rule Product 04: Um produto que estiver descontinuado pode ser vendido, entretanto não deverá ser apontado no relatório de lista de compras.
+
+---
+### Public Interface
+
+  - remove_stock()
+  - add_stock()
+  - change_name()
+  - change_sale_value()
+  - change_cost_price()
+  - change_status()
+  - change_category()

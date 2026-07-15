@@ -4,7 +4,7 @@ from decimal import Decimal
 # internal import's
 from domain.inventory.product import Product
 from domain.enums.product_categorys import Category
-from repository.product_repository import ProductRepository
+from repository.inventory.product_repository import ProductRepository
 
 class ProductService:
   """Responsável por coordenar todos os processos relacionados a produtos do sistema."""
