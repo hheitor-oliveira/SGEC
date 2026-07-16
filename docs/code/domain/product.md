@@ -35,9 +35,9 @@
 
   - Domain Rule Product 02: O produto só poderá receber uma movimentação de saída, se a quantidade de saída não for maior que sua quantidade em estoque.
 
-  - Domain Rule Product 03: Um produto que estiver inativo não pode receber saídas através de vendas.
+  - Domain Rule Product 03: Um produto que estiver descontinuado pode ser vendido, entretanto não deverá ser apontado no relatório de lista de compras.
 
-  - Domain Rule Product 04: Um produto que estiver descontinuado pode ser vendido, entretanto não deverá ser apontado no relatório de lista de compras.
+  - Domain Rule Product 04: Um produto que estiver com o status de Inativo não pode ser vendido, nem receber entradas e saídas.
 
 ---
 ### Public Interface

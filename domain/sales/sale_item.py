@@ -5,9 +5,9 @@ from decimal import Decimal
 from domain.inventory.product import Product
 
 class SaleItem:
-    """
-    
-    """
+    '''
+    Classe responsável por representar um item individualmente dentro de uma venda. (Sale <- SaleItem)
+    '''
     def __init__(self,
                  id: int,
                  product: Product,

@@ -2,6 +2,7 @@
 from domain.enums.user_roles import Roles
 
 class SystemUser:
+    '''Classe responsável por representar um usuário no sistema.'''
     def __init__(self,
                  id: int,
                  name: str,

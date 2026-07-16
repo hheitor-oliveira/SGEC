@@ -4,7 +4,7 @@ from domain.inventory.product import Product
 
 
 class ProductRepository:
-# """Reponsável por registrar um produto no banco."""
+    '''Reponsável por coordenar os processos de persistência da classe Product.'''
     def save(self, product: Product) -> None:
 
         connection = DatabaseConnection.get_connection()

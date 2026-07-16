@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class DatabaseConnection:
-  
+  '''Essa classe é responsável por realizar a conexão com o banco de dados para realizar as comunicações.'''
   @staticmethod
   def get_connection() -> psycopg.Connection:
     connection = psycopg.connect(

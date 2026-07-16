@@ -4,10 +4,18 @@ from decimal import Decimal
 # internal import's
 from domain.enums.product_status import ProductStatus
 from domain.enums.product_categorys import Category
+from domain.exceptions.product_exceptions import InvalidStockQuantityError
 
 class Product:
     """
-    A classe Product representa um produto do sistema e é responsável por proteger as regras relacionadas ao seu estoque, preços e estado.
+    A classe responsável por representar um produto do sistema e realizar operações relacionadas ao produto:
+    add_stock()
+    remove_stock()
+    change_name()
+    change_status()
+    change_category()
+    change_sale_price()
+    change_cost_price()
     """
     def __init__(self,
                  name: str,
@@ -27,8 +35,36 @@ class Product:
         self._cost_price = cost_price
         self._status = product_status
 
-    def add_stock(self, 
-                  quantity: int) -> None:
+    @property
+    def name(self) -> str:
+        return self._name
+    
+    @property
+    def category(self) -> Category:
+        return self._category
+    
+    @property
+    def cost_price(self) -> Decimal:
+        return self._cost_price
+    
+    @property
+    def sale_value(self) -> Decimal:
+        return self._sale_value
+    
+    @property
+    def stock_quantity(self) -> int:
+        return self._stock_quantity
+    
+    @property
+    def status(self) -> ProductStatus:
+        return self._status
+
+    def add_stock(self, quantity: int) -> None:
+        if quantity <= 0:
+            raise InvalidStockQuantityError(
+            "A quantidade deve ser maior que zero."
+        )
+
         self._stock_quantity += quantity
     
     def remove_stock(self,
@@ -54,27 +90,3 @@ class Product:
     def change_category(self,
                         new_category: Category):
         self._category = new_category
-        
-    @property
-    def name(self) -> str:
-        return self._name
-    
-    @property
-    def category(self) -> Category:
-        return self._category
-    
-    @property
-    def cost_price(self) -> Decimal:
-        return self._cost_price
-    
-    @property
-    def sale_value(self) -> Decimal:
-        return self._sale_value
-    
-    @property
-    def stock_quantity(self) -> int:
-        return self._stock_quantity
-    
-    @property
-    def status(self) -> ProductStatus:
-        return self._status

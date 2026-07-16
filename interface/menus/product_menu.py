@@ -11,23 +11,21 @@ class ProductMenu:
     self._product_service = ProductService()
   
   def run(self):
-    
+    '''Interface principal dos produtos.'''
     while True:
       Terminal.header('Menu Produtos - SGEC')
       
-      print('1 - Cadastrar Produto')
-      print('2 - Remover Produto')
-      print('3 - Editar Produto')
-      print('4 - Dar entrada em Produto')
-      print('5 - Dar saída em Produto')
-      print('6 - Sair')
+      print('1 - Cadastros')
+      print('2 - Alterações')
+      print('3 - Movimentações')
+      print('4 - Sair')
       
       Terminal.separator()
       
       user_choice = Terminal.ask_int('Escolha a opção desejada')
       
       if user_choice == 1:
-        self.show_create_product_screen()
+        self.create_product_screen()
       elif user_choice == 2:
         input()
         Terminal.clear()
@@ -47,8 +45,11 @@ class ProductMenu:
       elif user_choice == 6:
         break
   
-  def show_create_product_screen(self):
-    
+  def select_product_screen(self) -> None:
+    pass
+  
+  def create_product_screen(self) -> None:
+    '''Interface de criação de um produto no terminal.'''
     name = None
     selected_category = None
     cost_price = None
@@ -97,3 +98,30 @@ class ProductMenu:
           Terminal.error('Preencha todos os campos antes de continuar!')
           Terminal.pause()
           continue
+        
+  def edit_product_screen(self) -> None:
+    Terminal.header('Operações de Alteração de Produtos - SGEC')
+    print('1 - Alterar nome do produto')
+    print('2 - Alterar categoria do produto')
+    print('3 - Alterar preço de custo do produto.')
+    print('4 - Alterar valor de venda do produto.')
+    print('5 - Alterar status do produto.')
+    print('6 - Sair')
+    Terminal.separator
+    Terminal.ask_int('Escolha a alteração para ser realizada.')
+   
+  def movement_product_screen(self) -> None:
+    while True:
+      Terminal.header('Movimentações de Produto - SGEC')
+      print('1 - Dar entrada em um produto.')
+      print('2 - Dar saída em um produto.')
+      print('3 - Sair')
+      Terminal.separator()
+      option = Terminal.ask_int('Escolha a operação desejada.')
+      
+      if option == 1:
+        pass
+      if option == 2:
+        pass
+      if option == 3:
+        break

@@ -9,7 +9,7 @@ from domain.inventory.movement_item import MovementItem
 
 class Movement:
     """
-    
+    Classe principal responsável por representar o registro de uma movimentação de produtos realizada no sistema.
     """
     def __init__(self,
                  id: int,

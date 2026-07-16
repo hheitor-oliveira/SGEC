@@ -7,7 +7,7 @@ from domain.enums.product_categorys import Category
 from repository.inventory.product_repository import ProductRepository
 
 class ProductService:
-  """Responsável por coordenar todos os processos relacionados a produtos do sistema."""
+  '''Responsável por coordenar todos os processos da Classe Product no sistema.'''
   
   def __init__(self):
     self._product_repository = ProductRepository()
@@ -23,3 +23,6 @@ class ProductService:
     self._product_repository.save(product)
     
     return product
+  
+  def entry_product(self, product: Product) -> None:
+     pass

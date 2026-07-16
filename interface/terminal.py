@@ -3,7 +3,7 @@ import os
 from decimal import Decimal
 
 class Terminal:
-    """Utilitário responsável pela interface do terminal."""
+    '''Utilitário responsável pela interface do terminal.'''
 
     @staticmethod
     def ask_decimal(message: str) -> Decimal:

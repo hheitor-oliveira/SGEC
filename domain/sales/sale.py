@@ -8,9 +8,8 @@ from domain.sales.sale_item import SaleItem
 from domain.sales.sale_payment import SalePayment
 
 class Sale:
-    """
-    *
-    """
+    '''Classe responsável por representar uma venda no sistema, além de representar operações relacionadas a uma venda.
+    Essa classe possui o conceito de State Machine.'''
     def __init__(self,
                  id: int,
                  items: list[SaleItem],
