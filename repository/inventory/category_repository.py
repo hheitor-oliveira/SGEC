@@ -4,6 +4,8 @@ from domain.inventory.category import Category
 
 
 class CategoryRepository:
+  
+  # Função responsável por salvar a criação de uma categoria.
   def save(self, category: Category) -> None:
 
     connection = DatabaseConnection.get_connection()
@@ -25,5 +27,36 @@ class CategoryRepository:
       
       connection.commit()
     
+    finally:
+      connection.close()
+      
+  def reconstruct(self) -> list[Category]:
+    
+    connection = DatabaseConnection.get_connection()
+    
+    try:
+      cursor = connection.cursor()
+
+      cursor.execute(
+        '''
+        SELECT 
+        category_id,
+        category_name        
+        FROM category;
+        '''
+      )
+    
+      rows = list(cursor.fetchall())
+      categories: list[Category] = []
+      
+      for row in rows:
+        category_id = row[0]
+        category_name = row[1]
+        
+        category = Category.restore(category_name, category_id)
+        categories.append(category)
+      
+      return categories
+        
     finally:
       connection.close()

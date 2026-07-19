@@ -29,7 +29,7 @@ class ProductRepository:
                     product.sale_value
                 )
             )
-
+    
         finally:
             connection.close()
             

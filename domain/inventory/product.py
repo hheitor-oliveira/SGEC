@@ -37,13 +37,13 @@ class Product:
 
     @classmethod
     def restore(cls,
-                _id: int,
-                _name: str,
-                _category: Category,
-                _stock_quantity: int,
-                _sale_value: Decimal,
-                _cost_price: Decimal,
-                _self_status: ProductStatus) -> object:
+                id: int,
+                name: str,
+                category: Category,
+                stock_quantity: int,
+                sale_value: Decimal,
+                cost_price: Decimal,
+                self_status: ProductStatus) -> object:
         
         product = object.__new__(cls)
         return product
