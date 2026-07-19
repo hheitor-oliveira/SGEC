@@ -24,13 +24,15 @@ class ProductRepository:
                 """,
                 (
                     product.name,
-                    product.category.value,
+                    product.category,
                     product.cost_price,
                     product.sale_value
                 )
             )
 
-            connection.commit()
-
         finally:
             connection.close()
+            
+            
+    def reconstruct(self, product: Product):
+        pass

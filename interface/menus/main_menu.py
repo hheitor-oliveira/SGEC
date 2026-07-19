@@ -1,10 +1,10 @@
 from interface.terminal import Terminal
-from interface.menus.product_menu import ProductMenu
+from interface.menus.product_menus.inventory_menu import InventoryMenu
 
 class MainMenu:
 
   def __init__(self):
-    self._product_menu = ProductMenu()  
+    self._product_menu = InventoryMenu()  
       
   def run(self) -> None:
     
@@ -12,8 +12,8 @@ class MainMenu:
       
       Terminal.header("Menu Principal - SGEC")
       
-      print('1 - Produtos')
-      print('2 - Vendas (Em desenvolvimento)')
+      print('1 - Inventário')
+      print('2 - PDF (Em desenvolvimento)')
       print('3 - Sair')
       
       Terminal.separator()

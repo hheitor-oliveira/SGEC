@@ -3,7 +3,7 @@ from decimal import Decimal
 
 # internal import's
 from domain.inventory.product import Product
-from domain.enums.product_categorys import Category
+from domain.inventory.category import Category
 from repository.inventory.product_repository import ProductRepository
 
 class ProductService:

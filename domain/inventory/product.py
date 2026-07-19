@@ -3,7 +3,7 @@ from decimal import Decimal
 
 # internal import's
 from domain.enums.product_status import ProductStatus
-from domain.enums.product_categorys import Category
+from domain.inventory.category import Category
 from domain.exceptions.product_exceptions import InvalidStockQuantityError
 
 class Product:
@@ -34,6 +34,19 @@ class Product:
         self._sale_value = sale_value
         self._cost_price = cost_price
         self._status = product_status
+
+    @classmethod
+    def restore(cls,
+                _id: int,
+                _name: str,
+                _category: Category,
+                _stock_quantity: int,
+                _sale_value: Decimal,
+                _cost_price: Decimal,
+                _self_status: ProductStatus) -> object:
+        
+        product = object.__new__(cls)
+        return product
 
     @property
     def name(self) -> str:
